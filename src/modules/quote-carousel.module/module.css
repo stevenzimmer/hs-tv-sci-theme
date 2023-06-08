@@ -1,0 +1,25 @@
+.swiper-pagination.pagination-light .swiper-pagination-bullet {
+  border: 2px solid #ffffff;
+}
+  
+.swiper-pagination .swiper-pagination-bullet {
+  background: transparent;
+  border: 2px solid #009061;
+  width: 20px;
+  height:20px;
+  opacity:1;
+}
+
+.swiper-pagination.pagination-light .swiper-pagination-bullet-active {
+ 
+  background-image: url("https://8975772.fs1.hubspotusercontent-na1.net/hubfs/8975772/pagination-dot-texture-white.png");
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  width: 28px;
+  height:28px;
+  border: 2px solid #0FBF84;
+  background-image: url("https://8975772.fs1.hubspotusercontent-na1.net/hubfs/8975772/Icons/pagination-dot-texture.png");
+  background-size: cover;
+  background-position: center;
+}

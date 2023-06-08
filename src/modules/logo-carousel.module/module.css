@@ -1,0 +1,9 @@
+.flickity-viewport {
+  width: 100%;
+  height:100%!important;
+}
+
+.flickity-slider {
+  display: flex;
+  align-items: center;
+}

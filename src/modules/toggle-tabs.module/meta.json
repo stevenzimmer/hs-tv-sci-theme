@@ -1,0 +1,16 @@
+{
+  "label": "Toggle Tabs",
+  "icon" : "https://www.kalungi.com/hubfs/Atlas/Module%20Logos/Image-plus-text.svg",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [],
+  "is_available_for_new_content": true
+}

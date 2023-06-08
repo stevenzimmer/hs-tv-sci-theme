@@ -1,0 +1,131 @@
+<!-- module html  -->
+{{ require_css("https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css") }}
+{{ require_js("https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js", "head") }}
+
+
+<div class="flex flex-wrap items-stretch quote-swiper relative overflow-hidden">
+
+  <div class="swiper-wrapper h-full mb-12">
+  {% for item in module.quote_slide %}
+    <div class=" swiper-slide">
+      <div class="md:hidden mb-12">
+     
+        <div class="mb-6">
+          {% if item.logo.src %}
+            {% set sizeAttrs = 'width="{{ item.logo.width }}" height="{{ item.logo.height }}"' %}
+            {% if item.logo.size_type == 'auto' %}
+              {% set sizeAttrs = 'width="{{ item.logo.width }}" height="{{ item.logo.height }}" style="max-width: 100%; height: auto;"' %}
+            {% elif item.logo.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ item.logo.max_width }}" height="{{ item.logo.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = item.logo.loading != 'disabled' ? 'loading="{{ item.logo.loading }}"' : '' %}
+            <img class="m-0" src="{{ item.logo.src }}" alt="{{ item.logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+        </div>
+        <div class="h-1 w-3/4 bg-[#0FBF84] mb-6"></div>
+        <div class="mb-6">
+          <p class="mb-3 text-[24px] leading-normal italic {% if module.text_dark %}
+          
+            text-[#1C4633]
+            {% else %}
+            text-white 
+              
+          {% endif %}">
+            {{ item.qs_quote }}
+            </p>
+        </div>
+        <div class="flex items-center">
+          <div class="w-1/3">
+            {% if item.headshot.src %}
+            {% set sizeAttrs = 'width="{{ item.headshot.width }}" height="{{ item.headshot.height }}"' %}
+            {% if item.headshot.size_type == 'auto' %}
+              {% set sizeAttrs = 'width="{{ item.headshot.width }}" height="{{ item.headshot.height }}" style="max-width: 100%; height: auto;"' %}
+            {% elif item.headshot.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ item.headshot.max_width }}" height="{{ item.headshot.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+             {% set loadingAttr = item.headshot.loading != 'disabled' ? 'loading="{{ item.headshot.loading }}"' : '' %}
+            <img src="{{ item.headshot.src }}" alt="{{ item.headshot.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+          </div>
+          <div class="w-2/3 px-6">
+
+            <p class="font-bold text-[#0FBF84] m-0">
+              {{ item.qs_name }}
+              </p>
+              <p class="m-0 text-[#0FBF84]">
+              {{ item.qs_title }}
+              </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="lg:p-6  relative mb-4  h-full hidden md:!block !visible">
+        <div class="flex flex-wrap items-center">
+          <div class="md:w-1/4 px-6 lg:px-12">
+            {% if item.headshot.src %}
+            {% set sizeAttrs = 'width="{{ item.headshot.width }}" height="{{ item.headshot.height }}"' %}
+            {% if item.headshot.size_type == 'auto' %}
+              {% set sizeAttrs = 'width="{{ item.headshot.width }}" height="{{ item.headshot.height }}" style="max-width: 100%; height: auto;"' %}
+            {% elif item.headshot.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ item.headshot.max_width }}" height="{{ item.headshot.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+             {% set loadingAttr = item.headshot.loading != 'disabled' ? 'loading="{{ item.headshot.loading }}"' : '' %}
+            <img class="rounded-full" src="{{ item.headshot.src }}" alt="{{ item.headshot.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+          </div>
+          <div class="md:w-3/4">
+            <div class="mb-3 px-6 lg:px-12">
+            {% if item.logo.src %}
+              {% set sizeAttrs = 'width="{{ item.logo.width }}" height="{{ item.logo.height }}"' %}
+              {% if item.logo.size_type == 'auto' %}
+                {% set sizeAttrs = 'width="{{ item.logo.width }}" height="{{ item.logo.height }}" style="max-width: 100%; height: auto;"' %}
+              {% elif item.logo.size_type == 'auto_custom_max' %}
+                {% set sizeAttrs = 'width="{{ item.logo.max_width }}" height="{{ item.logo.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = item.logo.loading != 'disabled' ? 'loading="{{ item.logo.loading }}"' : '' %}
+              <img class="m-0" src="{{ item.logo.src }}" alt="{{ item.logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+            </div>
+            <div class="border-l-4 {% if module.light %}
+              border-white
+              {% else %}
+                border-[#0FBF84]
+            {% endif %} px-6 lg:px-12">
+              <div>
+                <p class="mb-3 text-[24px] md:text-[32px] lg:text-[36px] leading-normal italic {% if module.text_dark %}
+          
+                  text-[#1C4633]
+                  {% else %}
+                  text-white 
+                    
+                {% endif %}">
+                  {{ item.qs_quote }}
+                  </p>
+              </div>
+              <div class="flex flex-wrap lg:flex-nowrap relative">
+                <div class="w-full sm:w-6/12 mb-6 sm:mb-0">
+                  
+                  <p class="font-bold text-[#0FBF84] m-0">
+                  {{ item.qs_name }}
+                  </p>
+                  <p class="m-0 text-[#0FBF84]">
+                  {{ item.qs_title }}
+                  </p>
+                </div>
+              </div>
+            </div>
+        
+          </div>
+      
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+
+  </div>
+  <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal {% if module.light %}
+    pagination-light
+    
+  {% endif %}"></div>
+
+</div>

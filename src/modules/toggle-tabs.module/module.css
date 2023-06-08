@@ -1,0 +1,21 @@
+.vmc-row {
+border-color: #0FBF84;
+}
+@media only screen and (min-width: 768px) {
+  .vmc-row {
+    border-color: transparent;
+    }
+    
+    .vmc-row.active {
+border-color: #0FBF84;
+}
+
+.vmc-row .vmc-row-description {
+  display:none;
+}
+
+.vmc-row.active .vmc-row-description {
+  display:block;
+}
+}
+

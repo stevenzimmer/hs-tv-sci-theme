@@ -1,0 +1,21 @@
+node_modules
+css
+dist
+images
+modules
+sections
+templates
+child.css
+child.js
+package-lock.json
+
+!src/css
+!src/images
+!src/modules
+!src/sections
+!src/templates
+!src/partials
+
+
+# HubSpot config file
+hubspot.config.yml

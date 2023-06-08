@@ -1,0 +1,102 @@
+[
+  {
+   "type": "image",
+   "id": "15c0be10-3235-651d-d1f8-95376f590044",
+   "default": {
+    "size_type": "auto",
+    "src": "https://8975772.fs1.hubspotusercontent-na1.net/hubfs/8975772/cta-section-background-texture.png",
+    "alt": "cta-section-background-texture",
+    "loading": "lazy",
+    "width": 1293,
+    "height": 683,
+    "max_width": 1293,
+    "max_height": 683
+   },
+   "resizable": true,
+   "responsive": true,
+   "show_loading": false,
+   "label": "Background Texture",
+   "name": "background_texture"
+  },
+  {
+   "type": "text",
+   "id": "81a35560-0fdd-2d2a-98e3-5ddf13fbe366",
+   "validation_regex": "",
+   "label": "Label",
+   "name": "cta_section_label",
+   "default": "Lorem Ipsum"
+  },
+  {
+   "allow_new_line": false,
+   "default": "Streamline operations and make bigger sales with Prokeep",
+   "display_width": null,
+   "id": "4223c266-d8aa-aa80-09fd-9e5013d1c2c7",
+   "label": "Header",
+   "locked": false,
+   "name": "cta_section_header",
+   "required": false,
+   "show_emoji_picker": false,
+   "type": "text",
+   "validation_regex": ""
+  },
+  {
+   "type": "group",
+   "id": "06b134e1-8321-b8ec-0cc0-5e571816bc0f",
+   "label": "Button",
+   "children": [
+    {
+     "default": {
+      "url": {
+       "content_id": null,
+       "type": "EXTERNAL",
+       "href": ""
+      },
+      "open_in_new_tab": false,
+      "no_follow": false
+     },
+     "display_width": null,
+     "id": "d4ab65ab-2c0a-7f23-62c2-319da2c1b181",
+     "label": "Link",
+     "locked": false,
+     "name": "link",
+     "required": false,
+     "show_advanced_rel_options": false,
+     "supported_types": [
+      "EXTERNAL",
+      "CONTENT",
+      "FILE",
+      "EMAIL_ADDRESS",
+      "BLOG",
+      "CALL_TO_ACTION"
+     ],
+     "type": "link"
+    },
+    {
+     "allow_new_line": false,
+     "default": "Request a Demo",
+     "display_width": null,
+     "id": "8b21961b-6e44-dbc6-f855-a63f1cba837e",
+     "label": "Button Text",
+     "locked": false,
+     "name": "text",
+     "required": false,
+     "show_emoji_picker": false,
+     "type": "text",
+     "validation_regex": ""
+    }
+   ],
+   "name": "cta_section_button",
+   "default": {
+    "link": {
+     "url": {
+      "content_id": null,
+      "type": "EXTERNAL",
+      "href": ""
+     },
+     "open_in_new_tab": false,
+     "no_follow": false
+    },
+    "text": "Request a Demo"
+   }
+  }
+ ]

@@ -1,0 +1,25 @@
+<!-- module html  -->
+
+{% set position = "" %}
+
+{% if module.texture_position == "center" %}
+  {% set position = "right: 50%;" %}
+{% endif  %}
+
+{% if module.texture_position == "right" %}
+ {% set position = "right: 0;" %}
+{% endif  %}
+<div class="relative">
+  <div class="absolute top-0" style="transform: translate({{ module.x_axis }}%, {{ module.y_axis }}%); {{position}}" >
+  {% if module.tso_texture_graphic.src %}
+	{% set sizeAttrs = 'width="{{ module.tso_texture_graphic.width }}" height="{{ module.tso_texture_graphic.height }}"' %}
+	{% if module.tso_texture_graphic.size_type == 'auto' %}
+		{% set sizeAttrs = 'width="{{ module.tso_texture_graphic.width }}" height="{{ module.tso_texture_graphic.height }}" style="max-width: 100%; height: auto;"' %}
+	{% elif module.tso_texture_graphic.size_type == 'auto_custom_max' %}
+		{% set sizeAttrs = 'width="{{ module.tso_texture_graphic.max_width }}" height="{{ module.tso_texture_graphic.max_height }}" style="max-width: 100%; height: auto;"' %}
+	{% endif %}
+	 {% set loadingAttr = module.tso_texture_graphic.loading != 'disabled' ? 'loading="{{ module.tso_texture_graphic.loading }}"' : '' %}
+	<img class="block" src="{{ module.tso_texture_graphic.src }}" alt="{{ module.tso_texture_graphic.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+{% endif %}
+</div>
+</div>

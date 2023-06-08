@@ -1,0 +1,5 @@
+.hs {
+  &-button {
+    @apply px-8 py-2 rounded shadow uppercase text-[14px] font-bold  border-2 border-[#0FBF84] text-white bg-[#0FBF84] inline-block  min-w-[140px] text-center tracking-widest transition-all duration-200 hover:scale-105 hover:no-underline ;
+  }
+}

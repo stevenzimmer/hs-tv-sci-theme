@@ -1,0 +1,22 @@
+<!-- module html  -->
+{{ require_css("https://unpkg.com/flickity@2/dist/flickity.min.css") }}
+{{ require_js("https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js", "footer") }}
+
+  <div class="carousel-ticker h-[50px]">
+    {% for item in module.image_field %}
+    {% if item.src %}
+      {% set sizeAttrs = 'width="{{ item.width }}" height="{{ item.height }}"' %}
+      {% if item.size_type == 'auto' %}
+        {% set sizeAttrs = 'width="{{ item.width }}" height="{{ item.height }}" style="max-width: 100%; height: auto;"' %}
+      {% elif item.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ item.max_width }}" height="{{ item.max_height }}" style="max-width: 100%; height: auto;"' %}
+      {% endif %}
+      {% set loadingAttr = item.loading != 'disabled' ? 'loading="{{ item.loading }}"' : '' %}
+      <div class="slide-tick w-1/2 sm:w-1/3 lg:w-1/6  lg:px-12 px-6">
+
+      <img class="mx-auto" src="{{ item.src }}" alt="{{ item.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+    </div>
+    {% endif %}
+  {% endfor %}
+
+  </div>

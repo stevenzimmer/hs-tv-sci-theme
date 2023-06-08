@@ -1,0 +1,16 @@
+{
+  "label": "Logo Carousel",
+  "css_assets": [],
+  "external_js": [],
+  "global": false,
+  "help_text": "",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "icon" : "https://f.hubspotusercontent30.net/hubfs/8823337/Logo%20Slider.svg",
+  "js_assets": [],
+  "other_assets": [],
+  "smart_type": "NOT_SMART",
+  "tags": [],
+  "is_available_for_new_content": true
+}

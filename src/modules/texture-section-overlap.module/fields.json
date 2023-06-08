@@ -1,0 +1,80 @@
+[
+  {
+   "default": {
+    "size_type": "auto",
+    "src": "https://8975772.fs1.hubspotusercontent-na1.net/hubfs/8975772/texture-graphic.png",
+    "alt": "texture-graphic",
+    "loading": "lazy",
+    "width": 553,
+    "height": 920,
+    "max_width": 553,
+    "max_height": 920
+   },
+   "display_width": null,
+   "id": "2a86805c-fca5-61f4-9d99-74bc65f447f9",
+   "label": "Texture Graphic",
+   "locked": false,
+   "name": "tso_texture_graphic",
+   "required": false,
+   "resizable": true,
+   "responsive": true,
+   "show_loading": false,
+   "type": "image"
+  },
+  {
+   "choices": [
+    [
+     "left",
+     "Left"
+    ],
+    [
+     "center",
+     "Center"
+    ],
+    [
+     "right",
+     "Right"
+    ]
+   ],
+   "default": "left",
+   "display": "radio",
+   "display_width": null,
+   "id": "39b52964-f9be-7729-f5ea-be7c217b7515",
+   "label": "Texture Position",
+   "locked": false,
+   "multiple": false,
+   "name": "texture_position",
+   "preset": null,
+   "reordering_enabled": true,
+   "required": false,
+   "type": "choice"
+  },
+  {
+   "default": 0,
+   "display": "text",
+   "display_width": null,
+   "id": "da5fc715-2618-1f73-a902-19d5a8529e06",
+   "label": "X axis",
+   "locked": false,
+   "max": 100,
+   "min": -100,
+   "name": "x_axis",
+   "required": false,
+   "step": 1,
+   "type": "number"
+  },
+  {
+   "default": -50,
+   "display": "text",
+   "display_width": null,
+   "id": "d79bb44c-1ce5-ad8f-23e6-aac2fea51e07",
+   "label": "Y Axis",
+   "locked": false,
+   "max": 100,
+   "min": -100,
+   "name": "y_axis",
+   "required": false,
+   "step": 1,
+   "type": "number"
+  }
+ ]
