@@ -43,17 +43,18 @@
         {% set href = "mailto:" + href %}
       {% endif %}
     
-  <li class="group/main menu-item lg:px-2 lg:relative w-full lg:w-auto cursor-pointer lg:cursor-default xl:mx-1">
+  <li class="group/main menu-item lg:px-2 lg:relative w-full lg:w-auto cursor-pointer lg:cursor-default xl:mx-1 {% if item.dropdown|length > 0 %}{%else%}single-nav{% endif %}">
     <div class="flex flex-wrap items-center justify-between">
-
+      
       <a class="{{main_items_classes}}" {% if href %} href="{{ href }} {% endif %}"
         {% if item.link.open_in_new_tab %}target="_blank"{% endif %}
         {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}
         >
         {{item.title}}
       </a>
+      
       {% if item.dropdown|length > 0 %}
-      <div class="px-3 hidden lg:!block lg:!visible">
+      <div class="pl-3 pr-2 hidden lg:!block lg:!visible">
       
         <svg class="group-hover/main:rotate-180 origin-center transition-transform duration-200" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M11 7.70752L8 10.7075L5 7.70752" stroke="#31373D" stroke-width="1.5"/>
@@ -65,13 +66,14 @@
           <path d="M0.768463 1.22314L4.27551 4.72993C4.66606 5.12045 4.66607 5.75363 4.27553 6.14417L0.768462 9.65124" stroke="#1C4633" stroke-width="1.5" stroke-linecap="round"/>
           </svg>            
       </div>
+      
       {% endif %}
     
     </div>
       
     {% if item.dropdown|length > 0 %}
       
-    <div class="absolute lg:group-hover/main:block lg:hidden bg-white lg:shadow-lg lg:-left-[28px] lg:py-12 lg:px-3 rounded-b-lg z-30 top-5 lg:top-[100px] {% if item.large_dropdown %} lg:w-[600px] {% else %} lg:w-[400px] {% endif %} hidden lg:block lg:!visible child-dropdown w-full h-screen lg:h-auto py-6 lg:py-0">
+    <div class="absolute lg:group-hover/main:block lg:hidden bg-white lg:shadow-lg lg:-left-[28px] lg:py-12 lg:px-3 rounded-b-lg z-30 top-5 lg:top-[100px] {% if item.large_dropdown %} lg:w-[600px] {% else %} lg:w-[auto] {% endif %} hidden lg:block lg:!visible child-dropdown w-full h-screen lg:h-auto py-6 lg:py-0 {% unless item.large_dropdown %}content-aware{% endunless %}">
       {% if item.has_blog %}
 
       <div class="flex flex-wrap  px-3 lg:px-0">

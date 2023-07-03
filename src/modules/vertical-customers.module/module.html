@@ -156,7 +156,11 @@ justify-end
               {% if item.link.open_in_new_tab %}target="_blank"{% endif %}
               {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}
               class="hs-button">
-                See full case study 
+              {%if item.cta_text %}
+                {{item.cta_text}}
+              {%else%}
+                See full case study
+              {%endif%}
               </a>
       
             </div>
@@ -165,8 +169,17 @@ justify-end
         </div>
 
         <div class="w-full md:w-1/2 px-6 mb-12 lg:mb-0 " >
-       
-          {% if item.image.src %}
+          {% if item.item_video.player_id %}
+        {% set max_width = item.item_video.size_type == 'auto_custom_max' ? item.item_video.max_width : item.item_video.width %}
+        {% set max_height = item.item_video.size_type == 'auto_custom_max' ? item.item_video.max_height : item.item_video.height %}
+         
+        {% video_player "embed_player"
+        player_id={{ item.item_video.player_id }} type={{ item.item_video.player_type || 'scriptV4' }} full_width=False, width='720', height='720', conversion_asset={{ item.item_video.conversion_asset|tojson|safe }} autoplay={{ item.item_video.autoplay }} hidden_controls={{ item.item_video.hide_controls }}
+        loop={{ item.item_video.loop_video }}
+        muted={{ item.item_video.mute_by_default }}
+        %}
+      {% else %}
+          
           {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}"' %}
           {% if item.image.size_type == 'auto' %}
             {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}" style="max-width: 100%; height: auto;"' %}

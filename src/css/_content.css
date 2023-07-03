@@ -1,7 +1,0 @@
-.dnd-module {
-  .widget-type-linked_image {
-    .hs-image-widget {
-      @apply relative z-10;
-    } 
-  }
-}
