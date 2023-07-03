@@ -26,7 +26,7 @@
 }
 }
 
-.cs-hero-bg-video .hs-video-wrapper iframe {
+.cs-hero-bg .hs-video-wrapper iframe {
 border-radius: 50%;
 object-fit: cover;
 padding: 10px;

@@ -87,10 +87,7 @@
   },
   {
    "default": {
-    "player_id": 56480069014,
-    "height": 1944,
-    "width": 3816,
-    "player_type": "hsvideo2"
+    "player_id": null
    },
    "display_width": null,
    "id": "37eb8523-5fe2-9a3f-8bec-d9050296beba",
@@ -104,8 +101,6 @@
    "type": "videoplayer"
   },
   {
-   "type": "image",
-   "id": "4724762c-0ad4-34ba-a964-eab1a566a869",
    "default": {
     "size_type": "auto",
     "src": "https://8975772.fs1.hubspotusercontent-na1.net/hubfs/8975772/wisp-case-study-hero-img.png",
@@ -116,10 +111,15 @@
     "max_width": 824,
     "max_height": 824
    },
+   "display_width": null,
+   "id": "4724762c-0ad4-34ba-a964-eab1a566a869",
+   "label": "Background Image",
+   "locked": false,
+   "name": "image",
+   "required": false,
    "resizable": true,
    "responsive": true,
    "show_loading": false,
-   "label": "Background Image",
-   "name": "image"
+   "type": "image"
   }
  ]

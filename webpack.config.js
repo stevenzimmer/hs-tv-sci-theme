@@ -35,7 +35,7 @@ module.exports = ({ account, autoupload }) => ({
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: "src/css/main.css", to: "css" },
+                // { from: "src/css/main.css", to: "css" },
                 // { from: "src/css/theme-overrides.css", to: "css" },
                 // { from: "src/css/legacy", to: "css/legacy" },
                 { from: "src/images", to: "images" },

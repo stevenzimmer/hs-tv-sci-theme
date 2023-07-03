@@ -1,0 +1,26 @@
+<!-- module html  -->
+
+<div class="flex flex-wrap ">
+{% for item in module.value %}
+  <div class="w-full md:w-1/2 lg:w-1/3 px-6 mb-12">
+    <div class="flex items-stretch h-full">
+      <div class="px-3 w-[124px] ">
+        {% if item.icon.src %}
+      
+          {% set loadingAttr = item.icon.loading != 'disabled' ? 'loading="{{ item.icon.loading }}"' : '' %}
+          <img class="w-full" src="{{ item.icon.src }}" alt="{{ item.icon.alt }}" {{ loadingAttr }} >
+        {% endif %}
+      </div>
+      <div class="border-[#0FBF84] border-l-[4px] px-3 w-full ">
+        <div>
+
+        
+        <h3 class="text-[22px] text-[#1C4633] font-medium mb-2">{{ item.title }}</h3>
+        <p class="text-[#1C4633] m-0">{{ item.description }}</p>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+  {% endfor %}
+</div>

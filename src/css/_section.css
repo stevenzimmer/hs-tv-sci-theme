@@ -1,0 +1,11 @@
+.dnd-section {
+  @apply relative overflow-hidden;
+}
+
+@media only screen and (max-width: 908px) {
+  .dnd-section {
+    &.remove-bg-on-mobile {
+      background-image: none!important;
+    }
+  }
+}
